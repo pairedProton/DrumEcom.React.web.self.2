@@ -2,16 +2,17 @@ import React from "react";
 import MegaMenu from "./MegaMenu";
 import { useState } from "react";
 import { icons } from "../../../assets/images";
-import {useCategories} from '../../../hooks/useCategories'
+import { productCategoryData } from "../../../constants/productCategoryData";
+import { Link } from "react-router-dom";
 
 const NavbarMenu = () => {
 
-
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-    const {categories,loading,error} = useCategories()
+
   return (
-    <nav className="nav ml-10 select-none ">
-      <ul className="flex gap-8">
+    <nav className="nav select-none w-full flex justify-center">
+      <ul className="flex gap-10">
+        <li className="onHoverGreen cursor-pointer"><Link to="/products">Products</Link></li>
         <li
           className="relative flex items-center gap-1"
           onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
@@ -25,12 +26,12 @@ const NavbarMenu = () => {
             {isMegaMenuOpen ? <icons.upIcon /> : <icons.downIcon />}
           </span>
           {isMegaMenuOpen && (
-            <MegaMenu categories={categories} loading={loading} error={error} />
+            <MegaMenu categories={productCategoryData} />
           )}
         </li>
-        <li className="onHoverGreen">Deal of the Day</li>
-        <li className="onHoverGreen">Combo Offers</li>
-        <li className="onHoverGreen">Track Order</li>
+        <li className="onHoverGreen cursor-pointer"><Link to="/deal-of-the-day">Deal of the Day</Link></li>
+        <li className="onHoverGreen cursor-pointer"><Link to="/combo-offers">Combo Offers</Link></li>
+        <li className="onHoverGreen cursor-pointer"><Link to="/track-order">Track Order</Link></li>
       </ul>
     </nav>
   );

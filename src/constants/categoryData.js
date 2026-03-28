@@ -1,38 +1,32 @@
-import {productImages} from "../assets/images";
+import { productImages } from "../assets/images";
 
-const {amla,cleanseshake,ghee,gift,honey,immunity,jaggery,lemontea,moringa,quinoa,triphla,tulsigreentea,tulsitea,tulsihoney,turmericimmun,uptan} = productImages;
+const {
+  greenTea2,
+  ashwa,
+  faceWash,
+  cleanseshake,
+  gift
+} = productImages;
 
 export const categoryData = [
-    {
-        img:tulsihoney,
-        title:"Tea & Infusion"
-    },
-    {
-        img:jaggery,
-        title:"Packaged Food"
-    },
-    {
-        img:cleanseshake,
-        title:"Personal Care"
-    },
-    {
-        img:tulsigreentea,
-        title:"Detox Program"
-    },
-    {
-        img:gift,
-        title:"Gifting"
-    },
-    {
-        img:ghee,
-        title:"Oil & Ghee"
-    },
-    {
-        img:triphla,
-        title:"Trending Organic"
-    },
-    {
-        img:immunity,
-        title:"Herbal Suppliment"
-    },
-]
+  {
+    img: greenTea2,
+    title: "Teas & Coffees"
+  },
+  {
+    img: ashwa,
+    title: "Herbal Supplements"
+  },
+  {
+    img: faceWash,
+    title: "Personal Care"
+  },
+  {
+    img: cleanseshake,
+    title: "Detox & Wellness"
+  },
+  {
+    img: gift,
+    title: "Gifting & Bundles"
+  }
+];

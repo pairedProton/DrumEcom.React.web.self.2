@@ -1,89 +1,71 @@
-import { productImages } from "../assets/images"
+import { productImages } from "../assets/images";
 
 const {
-  amlapowder,
-  cleanseshake,
-  ghee,
-  gift: giftProduct,
-  honey,
-  immunity,
-  jaggery,
-  lemontea,
-  moringa,
-  quinoa,
+  leaves,
+  ashwa,
   triphla,
+  faceWash,
+  roseToner,
+  greenTea2,
   tulsigreentea: tulsiGreentea,
-  tulsitea: tulsitea,
-  tulsihoney: tulsiHoney,
-  turmericimmun,
-  uptan,
-} = productImages
+  teaHibiscus,
+} = productImages;
 
 export const saleOfTheDayData = [
-{
-    id:1,
-    name:"Immunity Booster",
-    image:immunity,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:2,
-    name:"Tulsi Green Tea",
-    image:tulsiGreentea,
-    price:"₹299",
-   salePrice:"₹199",
-    
-},
-{
-    id:3,
-    name:"Tulsi Honey",
-    image:tulsiHoney,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:4,
-    name:"Turmeric Immunity",
-    image:turmericimmun,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:5,
-    name:"Amla Powder",
-    image:amlapowder,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:6,
-    name:"Moringa",
-    image:moringa,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:7,
-    name:"Triphala",
-    image:triphla,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-{
-    id:8,
-    name:"Lemon Tea",
-    image:lemontea,
-    price:"₹399",
-   salePrice:"₹299",
-    
-},
-
-]
-    
+  {
+    id: 9,
+    name: "Chamomile Relaxation Tea",
+    image: leaves,
+    price: 529,
+    sale_price: 449,
+  },
+  {
+    id: 10,
+    name: "Ashwagandha Powder",
+    image: ashwa,
+    price: 999,
+    sale_price: 799,
+  },
+  {
+    id: 11,
+    name: "Triphala Powder",
+    image: triphla,
+    price: 699,
+    sale_price: 599,
+  },
+  {
+    id: 15,
+    name: "Turmeric Face Wash",
+    image: faceWash,
+    price: 599,
+    sale_price: 499,
+  },
+  {
+    id: 16,
+    name: "Rose Toner",
+    image: roseToner,
+    price: 499,
+    sale_price: 399,
+  },
+  {
+    id: 1,
+    name: "Detox Green Tea",
+    image: greenTea2,
+    price: 599,
+    sale_price: 499,
+  },
+  {
+    id: 2,
+    name: "Tulsi Green Tea",
+    image: tulsiGreentea,
+    price: 549,
+    sale_price: 449,
+  },
+  {
+    id: 3,
+    name: "Hibiscus Tea",
+    image: teaHibiscus,
+    price: 499,
+    sale_price: 399,
+  }
+];

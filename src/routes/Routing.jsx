@@ -13,6 +13,7 @@ import FAQs from "../pages/info/FAQs";
 import TrackOrder from "../pages/info/TrackOrder";
 import Contact from "../pages/info/Contact";
 import Certifications from "../pages/info/Certifications";
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 const Routing = () => {
   return (
@@ -20,9 +21,12 @@ const Routing = () => {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/deal-of-the-day" element={<Products />} />
+        <Route path="/combo-offers" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/profile" element={<UserProfile />} />
 
         {/* Info Pages */}
         <Route path="/about" element={<About />} />

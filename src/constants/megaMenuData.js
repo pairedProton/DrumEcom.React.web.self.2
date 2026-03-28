@@ -25,29 +25,52 @@
 //   },
 // ];
 
+// export const megaMenuData = [
+//   {
+//     title: "Teas & Coffees",
+//     items: ["Green Tea", "Wellness Tea", "Infusions", "Coffee"],
+//   },
+//   {
+//     title: "Herbal Supplements",
+//     items: ["Herbal Powders", "Herbal Capsules"],
+//   },
+//   {
+//     title: "Packaged Food",
+//     items: ["Dal & Pulses", "Health Food", "Oil & Ghee"],
+//   },
+//   {
+//     title: "Personal Care",
+//     items: ["Face Care", "Oils & Ghee", "Salt & Spices"],
+//   },
+//   {
+//     title: "Detox Program",
+//     items: ["Detox Kit"],
+//   },
+//   {
+//     title: "Gifting",
+//     items: ["Gift Hampers"],
+//   },
+// ];
+
 export const megaMenuData = [
   {
     title: "Teas & Coffees",
-    items: ["Green Tea", "Wellness Tea", "Infusions", "Coffee"],
+    items: ["Green Tea", "Wellness Tea"],
   },
   {
     title: "Herbal Supplements",
-    items: ["Herbal Powders", "Herbal Capsules"],
-  },
-  {
-    title: "Packaged Food",
-    items: ["Dal & Pulses", "Health Food", "Oil & Ghee"],
+    items: ["Ayurvedic Powders", "Superfoods"],
   },
   {
     title: "Personal Care",
-    items: ["Face Care", "Oils & Ghee", "Salt & Spices"],
+    items: ["Face Care", "Hair & Body"],
   },
   {
-    title: "Detox Program",
-    items: ["Detox Kit"],
+    title: "Detox & Wellness",
+    items: ["Cleanse Kits", "Beauty & Vitality"],
   },
   {
-    title: "Gifting",
-    items: ["Gift Hampers"],
+    title: "Gifting & Bundles",
+    items: ["Wellness Hampers"],
   },
 ];

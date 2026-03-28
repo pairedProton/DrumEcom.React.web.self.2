@@ -1,21 +1,11 @@
 import React from 'react'
 import CategoryCircle from '../../ui/CategoryCircle'
-// import {categoryData} from '../../../constants/categoryData'
+import { categoryData } from '../../../constants/categoryData'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import { FreeMode } from "swiper/modules";
-import { useCategories } from '../../../hooks/useCategories';
 
 const CategorySection = () => {
-  const {categories,loading,error} = useCategories()
-
-  if(loading){
-    return <div>Loading...</div>
-  }
-
-  if(error){
-    return <div>Error: {error}</div>
-  }
   return (
     <div className="flex gap-8 p-4 px-6">
       <Swiper
@@ -33,15 +23,15 @@ const CategorySection = () => {
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 0,
+            spaceBetween: 50,
           },
         }}
         modules={[FreeMode]}
         className="mySwiper"
       >
-        {categories.map((cat, index) => (
-          <SwiperSlide >
-            <CategoryCircle key={cat.id} img={cat.image} title={cat.name} />
+        {categoryData.map((cat, index) => (
+          <SwiperSlide key={index}>
+            <CategoryCircle img={cat.img} title={cat.title} />
           </SwiperSlide>
         ))}
       </Swiper>

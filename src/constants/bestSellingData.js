@@ -1,97 +1,87 @@
 import { productImages } from "../assets/images";
 
 const {
-  amlapowder,
-  cleanseshake,
-  ghee,
-  gift: giftProduct,
-  honey,
-  immunity,
-  jaggery,
-  lemontea,
-  moringa,
-  quinoa,
-  triphla,
+  greenTea2,
   tulsigreentea: tulsiGreentea,
-  tulsitea: tulsitea,
-  tulsihoney: tulsiHoney,
-  turmericimmun,
-  uptan,
-} = productImages
-
+  teaHibiscus,
+  goldenMilkMix,
+  digestiveTea,
+  sleepSupportTea,
+  ashwa,
+  triphla,
+  faceWash,
+  roseToner,
+} = productImages;
 
 export const BestSellersData = [
-    {
-        id:1,
-        name:"Ghee",
-        image:ghee,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:2,
-        name:"Cleanse Shake",
-        image:cleanseshake,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:3,
-        name:"Jaggery",
-        image:jaggery,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:4,
-        name:"Honey",
-        image:honey,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:5,
-        name:"Amla Powder",
-        image:amlapowder,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:6,
-        name:"Ubtan",
-        image:uptan,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:7,
-        name:"Quinoa",
-        image:quinoa,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:8,
-        name:"Triphla",
-        image:triphla,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-    {
-        id:9,
-        name:"Moringa",
-        image:moringa,
-        price:"₹299",
-       salePrice:"₹199",
-        
-    },
-   
-]
+  {
+    id: 1,
+    name: "Detox Green Tea",
+    image: greenTea2,
+    price: 599,
+    sale_price: 499,
+  },
+  {
+    id: 2,
+    name: "Tulsi Green Tea",
+    image: tulsiGreentea,
+    price: 549,
+    sale_price: 449,
+  },
+  {
+    id: 3,
+    name: "Hibiscus Tea",
+    image: teaHibiscus,
+    price: 499,
+    sale_price: 399,
+  },
+  {
+    id: 4,
+    name: "Golden Milk Mix",
+    image: goldenMilkMix,
+    price: 699,
+    sale_price: 599,
+  },
+  {
+    id: 5,
+    name: "Digestive Tea",
+    image: digestiveTea,
+    price: 449,
+    sale_price: 399,
+  },
+  {
+    id: 6,
+    name: "Sleep Support Tea",
+    image: sleepSupportTea,
+    price: 649,
+    sale_price: 549,
+  },
+  {
+    id: 10,
+    name: "Ashwagandha Powder",
+    image: ashwa,
+    price: 999,
+    sale_price: 799,
+  },
+  {
+    id: 11,
+    name: "Triphala Powder",
+    image: triphla,
+    price: 699,
+    sale_price: 599,
+  },
+  {
+    id: 15,
+    name: "Turmeric Face Wash",
+    image: faceWash,
+    price: 599,
+    sale_price: 499,
+  },
+  {
+    id: 16,
+    name: "Rose Toner",
+    image: roseToner,
+    price: 499,
+    sale_price: 399,
+  },
+];
