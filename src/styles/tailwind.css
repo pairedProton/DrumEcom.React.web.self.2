@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .onHoverGreen {
+        @apply cursor-pointer hover:text-emerald-600 transition-colors
+    }
+
+        .onHoverGreenLight {
+            @apply cursor-pointer hover:text-emerald-400 transition-colors
+        }
+}

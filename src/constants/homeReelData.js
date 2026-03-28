@@ -1,0 +1,65 @@
+import {homeVideos} from '../assets/images'
+
+const {gheeVideo, morungaVideo, quinoaVideo, tulsiVideo, uptanVideo} = homeVideos
+export const homeReelData = [
+    {
+        id:1,
+        video:gheeVideo,
+    },
+    {
+        id:2,
+        video:morungaVideo,
+    },
+    {
+        id:3,
+        video:quinoaVideo,
+    },
+    {
+        id:4,
+        video:tulsiVideo,
+    },
+    {
+        id:5,
+        video:uptanVideo,
+    },
+    {
+        id:6,
+        video:gheeVideo,
+    },
+    {
+        id:7,
+        video:morungaVideo,
+    },
+    {
+        id:8,
+        video:quinoaVideo,
+    },
+    {
+        id:9,
+        video:tulsiVideo,
+    },
+    {
+        id:10,
+        video:uptanVideo,
+    },
+    {
+        id:11,
+        video:gheeVideo,
+    },
+    {
+        id:12,
+        video:morungaVideo,
+    },
+    {
+        id:13,
+        video:quinoaVideo,
+    },
+    {
+        id:14,
+        video:tulsiVideo,
+    },
+    {
+        id:15,
+        video:uptanVideo,
+    },
+]
