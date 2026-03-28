@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { useOrders } from '../../context/OrderContext';
 import { HiPencil, HiCheck, HiPlus, HiTrash } from 'react-icons/hi2';
 
 // ─── User Details Panel ───────────────────────────────────────────
@@ -149,32 +150,36 @@ const AddressPanel = () => {
 };
 
 // ─── Orders Panel ─────────────────────────────────────────────────
-const mockOrders = [
-  { id: 'TAU-20241', name: 'Taurus Detox Green Tea – 7 Day Cleanse Blend', date: '22 Mar 2025', price: 499, status: 'Delivered', qty: 2 },
-  { id: 'TAU-20198', name: 'Taurus Ashwagandha Powder – 200g', date: '14 Mar 2025', price: 649, status: 'Shipped', qty: 1 },
-  { id: 'TAU-20150', name: 'Taurus Vitamin C Glow Serum', date: '01 Mar 2025', price: 799, status: 'Delivered', qty: 1 },
-];
-
 const statusColor = { Delivered: 'text-emerald-600 bg-emerald-50', Shipped: 'text-blue-600 bg-blue-50', Processing: 'text-yellow-600 bg-yellow-50' };
 
-const OrdersPanel = () => (
+const OrdersPanel = ({ orders }) => (
   <div className="flex flex-col gap-6">
     <h2 className="text-2xl font-heading font-bold text-gray-900">My Orders</h2>
-    {mockOrders.length === 0 ? (
+    {orders.length === 0 ? (
       <p className="text-gray-500 font-medium">You have no orders yet.</p>
     ) : (
       <div className="flex flex-col gap-4">
-        {mockOrders.map(order => (
-          <div key={order.id} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col sm:flex-row justify-between gap-4">
-            <div className="flex flex-col gap-1.5">
-              <p className="font-bold text-gray-900 text-[15px]">{order.name}</p>
-              <p className="text-gray-400 text-sm">Order ID: <span className="text-gray-600 font-medium">{order.id}</span></p>
-              <p className="text-gray-400 text-sm">Date: <span className="text-gray-600 font-medium">{order.date}</span></p>
-              <p className="text-gray-400 text-sm">Qty: <span className="text-gray-600 font-medium">{order.qty}</span></p>
+        {orders.map(order => (
+          <div key={order.id} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+            <div className="flex flex-col sm:flex-row justify-between gap-3">
+              <div className="flex flex-col gap-1.5">
+                <p className="text-gray-400 text-sm">Order ID: <span className="text-gray-600 font-medium">{order.id}</span></p>
+                <p className="text-gray-400 text-sm">Date: <span className="text-gray-600 font-medium">{order.date}</span></p>
+                <p className="text-gray-400 text-sm">Payment: <span className="text-gray-600 font-medium">{order.paymentMethod}</span></p>
+              </div>
+              <div className="flex flex-col items-start sm:items-end gap-2 shrink-0">
+                <p className="text-xl font-bold text-gray-900">₹ {order.total}</p>
+                <span className={`text-xs font-bold px-3 py-1 rounded-full ${statusColor[order.status] || 'text-gray-600 bg-gray-100'}`}>{order.status}</span>
+              </div>
             </div>
-            <div className="flex flex-col items-start sm:items-end gap-2 shrink-0">
-              <p className="text-xl font-bold text-gray-900">₹ {order.price}</p>
-              <span className={`text-xs font-bold px-3 py-1 rounded-full ${statusColor[order.status] || 'text-gray-600 bg-gray-100'}`}>{order.status}</span>
+            {/* Order Items */}
+            <div className="border-t border-gray-100 pt-3 flex flex-col gap-2">
+              {order.items.map(item => (
+                <div key={item.id} className="flex justify-between text-sm">
+                  <span className="text-gray-700">{item.name} <span className="text-gray-400">×{item.qty}</span></span>
+                  <span className="text-gray-600 font-medium">₹ {(item.salePrice || item.sale_price || item.price) * item.qty}</span>
+                </div>
+              ))}
             </div>
           </div>
         ))}
@@ -186,6 +191,7 @@ const OrdersPanel = () => (
 // ─── Page Root ────────────────────────────────────────────────────
 const UserProfile = () => {
   const { user, logout } = useAuth();
+  const { orders } = useOrders();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('details');
 
@@ -245,7 +251,7 @@ const UserProfile = () => {
           <main className="flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 min-h-[400px]">
             {activeTab === 'details' && <UserDetailsPanel user={user} />}
             {activeTab === 'addresses' && <AddressPanel />}
-            {activeTab === 'orders' && <OrdersPanel />}
+            {activeTab === 'orders' && <OrdersPanel orders={orders} />}
           </main>
         </div>
       </div>

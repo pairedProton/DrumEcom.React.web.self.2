@@ -14,6 +14,7 @@ import TrackOrder from "../pages/info/TrackOrder";
 import Contact from "../pages/info/Contact";
 import Certifications from "../pages/info/Certifications";
 import UserProfile from "../pages/UserProfile/UserProfile";
+import PaymentSuccess from "../pages/Checkout/PaymentSuccess";
 
 const Routing = () => {
   return (
@@ -27,6 +28,7 @@ const Routing = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
 
         {/* Info Pages */}
         <Route path="/about" element={<About />} />
